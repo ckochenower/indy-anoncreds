@@ -4,7 +4,7 @@ set -e
 PKG_FLEX=flex
 PKG_BISON=bison
 
-if [ -f /etc/redhat-release ]
+if [ -f /etc/redhat-release ] || grep -q "Amazon Linux AMI" /etc/os-release
 then
   # assumes this is a RedHat-based system.
   PACKAGE_MANAGER=yum
